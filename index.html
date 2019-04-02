@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Not a Test.</title>
+    <!-- <link rel="stylesheet" href="homepage.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/jko3rau.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<style>
+
+body {
+font-family: montserrat, sans-serif;
+margin:0px;
+font-size:14px;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+}
+
+#homepage{
+  width:100%;
+  height:100vh;
+}
+
+#title{
+  width:100%;
+  text-align:center;
+  margin-top:-40%;
+  z-index:1;
+}
+
+h1{
+  font-size:100px;
+  font-weight: 700;
+  color:#E85147;
+}
+
+#pageSelection{
+  position:relative;
+  padding-top:20px;
+  width:800px;
+  height:160px;
+  margin-left:22%;
+}
+
+#links{
+  color:#808080;
+  width:100%;
+}
+
+#link1{
+  display:inline-block;
+  width:33%;
+}
+
+#link1:hover .circle{
+  border:2px solid #463b5b;
+}
+
+#link1:hover .icon{
+  color:#463b5b;
+}
+
+#link1:hover .selectionText{
+  color:#463b5b;
+}
+
+#link2{
+  display:inline-block;
+  width:33%;
+}
+
+#link2:hover .circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #463b5b;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+}
+
+#link2:hover .icon{
+  color:#463b5b;
+}
+
+#link2:hover .selectionText{
+  color:#463b5b;
+}
+
+#link3{
+  float:right;
+  width:33%;
+}
+
+#link3:hover .circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #463b5b;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+}
+
+#link3:hover .icon{
+  color:#463b5b;
+}
+
+#link3:hover .selectionText{
+  color:#463b5b;
+}
+
+.circle{
+  width:40px;
+  height:40px;
+  /* background-color:#463b5b; */
+  border:2px solid #cacaca;
+  z-index:-1;
+  border-radius:90px;
+  padding-top:-10px;
+  margin-left:43%;
+  transition: border 0.3s ease-in-out;
+}
+
+.icon{
+  font-size:23px;
+  padding-bottom:20px;
+  color:	#909090;
+  text-align:center;
+  padding-top:5px;
+  transition: color 0.3s ease-in-out;
+}
+
+#assessment{
+  font-size:22px;
+}
+
+.selectionText{
+  padding-top:20px;
+  font-family:Lato, sans-serif;
+  font-weight:400;
+  letter-spacing: 0.5px;
+  text-transform:uppercase;
+  color:	#909090;
+  font-size:15px;
+  text-decoration:none;
+  transition: color 0.3s ease-in-out;
+}
+
+.popup_block{
+display:none;
+background:#fff; /*change the color of your background*/
+padding:15px;
+float:left;
+position:fixed;
+top:77%;left:52%;
+width:700px;
+z-index: 99999;
+text-align:left;
+line-height: 20px;
+}
+
+#popupText{
+  padding-left: 60px;
+  padding-right: 60px;
+  line-height:24px;
+}
+
+#fade {
+display:none;
+position:fixed;
+left:0px;
+top:0px;
+width:100%;
+height:100%;
+z-index:9999;
+background:{color:background}; /* change the color of the background below the box */
+opacity:.7; /* change the opacity */
+}
+
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+
+
+
+
+
+</style>
+  </head>
+  <body>
+
+<div id="homepage">
+<img src="http://www.mediafire.com/convkey/d7c5/eq2ccaaxwyh6tgxzg.jpg" />
+<div id="title">
+    <h1>This is not a test.</h1>
+    <div id="pageSelection">
+      <div id="links">
+        <div id="link1">
+          <div class="circle" id="1">
+            <a href="">
+            <div class="icon" id="dimensions"><a href="#?w=auto" rel="box1" class="poplight"><i class="fas fa-question"></i></a></div>
+          </div>
+          <div class="selectionText popup" id="dimensionsText"><a href="#?w=auto" rel="box1" class="poplight">About the project</a></a></div>
+          </div>
+        <div id="link2">
+          <div class="circle" id="1"><a href="">
+            <div class="icon" id="dimensions"><i class="fas fa-list-ul"></i></div>
+          </div>
+          <div class="selectionText" id="dimensionsText">Explore dimensions</a></div>
+          </div>
+        <div id="link3">
+            <div class="circle" id="2"><a href="https://tinat.netlify.com/" target="_blank">
+          <div class="icon" id="assessment"><i class="fas fa-pencil-alt"></i></div>
+          </div>
+          <div class="selectionText" id="assessmentText">Take the Assessment</a></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+  </body>
+
+  <div id="box1" class="popup_block">
+
+
+<div id="popupText">Personality assessments and models have been made readily accessible to the public in the form of online questionnaires, made popular thanks to their quick and clear results. However, these online questionnaires exist as self-inventories, and are therefore reliant upon one’s own, often subjective view of themselves. With this in mind, they are not tests so much as they are tools. This Is Not A Test is a project intended to encourage self awareness and reflection before, during and after taking online personality assessments. </div>
+
+    </div></div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+
+</html>
