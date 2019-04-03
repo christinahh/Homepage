@@ -189,6 +189,8 @@ h1{
     line-height:25px;
     vertical-align: middle;
     text-align:left;
+    color:#707070;
+    line-height:25px;
     width: 60%;
     margin-top:23%;
     border-radius: 8px;
@@ -277,9 +279,9 @@ h1{
   </body>
 
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(window).load(function () {
+$(window).on('load', function () {
     $(".trigger_popup_fricc").click(function(){
        $('.hover_bkgr_fricc').show();
     });
