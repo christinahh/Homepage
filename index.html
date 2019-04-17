@@ -16,7 +16,8 @@ body {
 font-family: montserrat, sans-serif;
 margin:0px;
 font-size:14px;
-  overflow-y:hidden;
+overflow-y: hidden;
+overflow-x: hidden;
 }
 
 a{
@@ -163,6 +164,24 @@ h1{
   transition: color 0.3s ease-in-out;
 }
 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
 /* Popup box BEGIN */
 .hover_bkgr_fricc{
     background:rgba(0,0,0,0);
@@ -180,6 +199,7 @@ h1{
     height:100%;
     vertical-align:middle;
 }
+
 .hover_bkgr_fricc > div {
     background-color: #fff;
     display: inline-block;
@@ -193,13 +213,16 @@ h1{
     color:#707070;
     line-height:25px;
     width: 60%;
-    margin-top:23%;
+    margin-top:12%;
     border-radius: 8px;
     padding: 10px 5%;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
 }
 
 #popText{
-  padding-left:180px;
+  padding-left:120px;
+  padding-right:100px;
 }
 .popupCloseButton {
     background-color: #fff;
@@ -211,8 +234,8 @@ h1{
     cursor: pointer;
     display: inline-block;
     position: absolute;
-    top: 62%;
-    left: 440px;
+    top: 44%;
+    left: 400px;
     font-size: 25px;
     line-height: 40px;
     width: 40px;
@@ -220,10 +243,12 @@ h1{
     text-align: center;
     transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
+
 .popupCloseButton:hover {
     color: #463b5b;
     border: 2px solid #463b5b;
 }
+
 .trigger_popup_fricc {
     cursor: pointer;
     display: inline-block;
@@ -239,7 +264,7 @@ h1{
   <body>
 
 <div id="homepage">
-<img src="http://www.mediafire.com/convkey/d7c5/eq2ccaaxwyh6tgxzg.jpg" />
+<img src="https://previews.dropbox.com/p/thumb/AAbgSVy2KnUMiROM104x7oahf-aH--tjWBX0tISkBd_RDHPQO9uxVEsY7YtRbSHM3m64LtXrrcl_nZWHuPGYjm6-p02frhIhVTSbKbwi19w0C6exrx00FmX9EiMkWafutWJEQFMmwXlj7fwh81_LpvhRH0ZoSepRcHHocvdf0H91Wnf8XgrxEt5XPObQV6NnPA0Wa5Uquwxkyqo2AgOZNe7KpkPM5kc1QyblZx9UrOkhb4n4RBWx4dsvFLoevLRPm_9XEh8Te8xklmV-NxMdJkflyxpHDqw1zO0e2ajXY8zcn3HkEPYNlMku4-2d-gKCSP9pWSErBSxJ4tqxiy478O4J/p.png?size_mode=5" />
 <div id="title">
     <h1>This is not a test.</h1>
     <div id="pageSelection">
@@ -249,7 +274,7 @@ h1{
             <a href="">
             <div class="icon" id="dimensions"><a class="trigger_popup_fricc"><i class="fas fa-question"></i></a></div>
           </div>
-          <div class="selectionText popup" id="dimensionsText"><a href="#?w=auto" rel="box1" class="poplight">About the project</a></a></div>
+          <div class="selectionText popup" id="dimensionsText"><a href="#?w=auto" rel="box1" class="trigger_popup_fricc">About the project</a></a></div>
           </div>
         <div id="link2">
           <div class="circle" id="1"><a href="https://christinahh.github.io/Dimensions/">
@@ -273,7 +298,7 @@ h1{
           <div>
               <div class="popupCloseButton">X</div>
               <div id="popText">
-                <p>Personality assessments and models have been made readily accessible to the public in the form of online questionnaires, made popular thanks to their quick and clear results. However, these online questionnaires exist as self-inventories, and are therefore reliant upon one’s own, often subjective view of themselves. With this in mind, they are not tests so much as they are tools. This Is Not A Test is a project intended to encourage self awareness and reflection before, during and after taking online personality assessments.</p></div>
+                <p>Personality assessments and models have been made readily accessible to the public in the form of online questionnaires, garnering popularity due to their quick and clear results. My undergraduate thesis is an exploration of the feedback loop generated from the self-report style of these online tests. The website features two interactive components: an investigation of three widely popular online personality questionnaires, and a new assessment that repurposes the self-report format to promote reflection and critical thought.  Upon receiving an assessment result, visitors are encouraged to take a corresponding bookmark or sticker as a means of remembering it. An additional informative video summarizes the overall nature of online personality tests, including a commentary on how they rely upon self-input. </p></div>
           </div>
       </div>
 
@@ -286,13 +311,11 @@ $(window).on('load', function () {
     $(".trigger_popup_fricc").click(function(){
        $('.hover_bkgr_fricc').show();
     });
-    $('.hover_bkgr_fricc').click(function(){
-        $('.hover_bkgr_fricc').hide();
-    });
     $('.popupCloseButton').click(function(){
-        $('.hover_bkgr_fricc').hide();
+        $('.hover_bkgr_fricc').fadeOut(300);
     });
 });
+
 </script>
 
 
